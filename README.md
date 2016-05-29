@@ -2,7 +2,11 @@
 
 ## A Web project using Maven, Tomcat, Struts...
 
->>> mvn clean install tomcat7:run
+## Run project
+
+    mvn clean install tomcat7:run
+
+## >>>
 
 1. create, Maven, Tomcat... and run it <<here
 2. servlet
