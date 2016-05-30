@@ -13,3 +13,8 @@
 3. filtter
 4. listener
 5. Struts
+
+
+    資源注射 @Resource(name="persons")
+    <env-entry>
+    JNDI

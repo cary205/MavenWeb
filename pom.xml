@@ -1,4 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.mis</groupId>
     <artifactId>MavenWeb</artifactId>
@@ -9,9 +12,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
+    <dependencies>
+        <dependency>
+            <!-- http://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina/7.0.69 -->
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-catalina</artifactId>
+            <version>7.0.69</version>
+            <!-- provided: indicates you expect the JDK or a container to provide the dependency at runtime，不需打包在WAR裡 -->
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    
     <build>
         <plugins>
             <plugin>
+                <!-- http://tomcat.apache.org/maven-plugin-2.2/ -->
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>

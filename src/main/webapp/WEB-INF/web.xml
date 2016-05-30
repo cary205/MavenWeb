@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+    id="WebApp_ID" version="2.5">
+    
     <display-name>MavenWeb</display-name>
+    
+    <servlet>
+        <description></description>
+        <display-name>HelloServlet</display-name>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>tw.edu.mis.HelloServlet</servlet-class>
+        <init-param>
+            <param-name>babyface</param-name>
+            <param-value>babyface Value</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jojohoho</param-name>
+            <param-value>jojohoho Value</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <!-- 使 servlet 與 struts2 共存，增加副檔名點綴 -->
+        <url-pattern>/HelloServlet.servlet</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>allServlet</param-name>
+        <param-value>allServlet Value</param-value>
+    </context-param>
     
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
