@@ -8,12 +8,13 @@
 
 ## >>>
 
-1. create, Maven, Tomcat... and run it <<here
-2. servlet
-3. filtter
-4. listener
-5. Struts
+1. create, Maven, Tomcat... and run it
+2. servlet << here
+?. filtter
+?. listener
+?. Struts
 
+## ???
 
     資源注射 @Resource(name="persons")
     <env-entry>
