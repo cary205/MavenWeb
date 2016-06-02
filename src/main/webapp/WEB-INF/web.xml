@@ -32,6 +32,12 @@
         <param-value>allServlet Value</param-value>
     </context-param>
     
+    <env-entry>
+        <env-entry-name>persons</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>Cary, jojohoho</env-entry-value>
+    </env-entry>
+    
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>

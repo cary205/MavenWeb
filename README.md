@@ -5,6 +5,8 @@
 ## Run project
 
     mvn clean install tomcat7:run
+    or
+    mvn clean install tomcat6:run
 
 ## >>>
 
@@ -17,6 +19,4 @@
 
 ## ???
 
-    資源注射 @Resource(name="persons")
-    <env-entry>
-    JNDI
+    <env-entry> @Resource(name="persons") JNDI => Tomcat7 XX

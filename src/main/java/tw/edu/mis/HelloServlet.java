@@ -18,6 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	@Resource(name="persons")
+	private String annoPersons;
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -37,6 +40,17 @@ public class HelloServlet extends HttpServlet {
 		this.log(this.getInitParameter("jojohoho"));
 		//上下文參數 context-param
 		this.log(this.getServletContext().getInitParameter("allServlet"));
+		//使用JNDI獲得資源
+		String persons = null;
+		try {
+			Context ctx = new InitialContext();
+			persons = (String) ctx.lookup("java:comp/env/persons");
+			this.log("persons: " + persons);
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		this.log(this.annoPersons);
 		
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
@@ -53,6 +67,8 @@ public class HelloServlet extends HttpServlet {
 		out.println("<P>babyface: " + this.getInitParameter("babyface") + "</P>");
 		out.println("<P>jojohoho: " + this.getInitParameter("jojohoho") + "</P>");
 		out.println("<P>allServlet: " + this.getServletContext().getInitParameter("allServlet") + "</P>");
+		out.println("<P>persons: " + persons + "</P>");
+		out.println("<P>annoPersons: " + this.annoPersons + "</P>");
 		out.println("</BODY>");
 		out.println("</HTML>");
 		
