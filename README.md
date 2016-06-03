@@ -11,9 +11,9 @@
 ## >>>
 
 1. create, Maven, Tomcat... and run it
-2. servlet << here
+2. servlet
+3. filtter << here
 
-?. filtter
 ?. listener
 ?. Struts
 

@@ -46,4 +46,15 @@
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
+    
+    <!-- 將自訂 filter 放在 struts2 filter 之前，避免執行 struts2 filter 後就結束 -->
+    <filter>
+        <display-name>HelloFilter</display-name>
+        <filter-name>HelloFilter</filter-name>
+        <filter-class>tw.edu.mis.HelloFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HelloFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
