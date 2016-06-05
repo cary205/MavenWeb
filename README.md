@@ -12,9 +12,9 @@
 
 1. create, Maven, Tomcat... and run it
 2. servlet
-3. filtter << here
+3. filtter
+4. listener << here
 
-?. listener
 ?. Struts
 
 ## ???
