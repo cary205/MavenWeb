@@ -13,7 +13,8 @@
 1. create, Maven, Tomcat... and run it
 2. servlet
 3. filtter
-4. listener << here
+4. listener
+5. taglib << here
 
 ?. Struts
 
