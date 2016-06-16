@@ -13,12 +13,13 @@
     </properties>
     
     <dependencies>
+        <!-- provided: indicates you expect the JDK or a container to provide the dependency at runtime，不需打包在WAR裡 -->
+        
+        <!-- http://mvnrepository.com/artifact/javax.servlet/servlet-api -->
         <dependency>
-            <!-- http://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina/7.0.69 -->
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-catalina</artifactId>
-            <version>7.0.69</version>
-            <!-- provided: indicates you expect the JDK or a container to provide the dependency at runtime，不需打包在WAR裡 -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
