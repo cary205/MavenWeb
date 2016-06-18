@@ -14,9 +14,12 @@
 2. servlet
 3. filtter
 4. listener
-5. taglib << here
+5. taglib
+6. Struts << here
 
-?. Struts
+?. Struts + JSON
+?. Struts + taglib
+?. DB
 
 ## ???
 
